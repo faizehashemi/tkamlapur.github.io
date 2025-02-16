@@ -762,98 +762,106 @@ function handleTransportSelection_emreq(selection) {
     }
 }
 
-// Information about Transport options
+// Makkah Atraaf Ziyarat Information
 function sendMakkahAtraafInfo_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Makkah Atraaf Ziyarat:\n\nYour _atraaf ziyarat_ will be on the second day of your arrival (subject to change). The buses will depart at 2:30 PM. Please make sure to check the notice board regularly for updates.";
+    botResponse.innerHTML = "📍 <strong>Makkah Atraaf Ziyarat:</strong><br><br>🗓️ Your <em>atraaf ziyarat</em> will be on the <strong>second day of your arrival</strong> (subject to change).<br>🚌 Buses will depart at <strong>2:30 PM</strong>.<br>📢 <em>Please check the notice board regularly for updates.</em>";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// Madina Departure Information
 function sendMadinaDepartureInfo_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Madina Departure:\n\nFor _Madina departure_, your name will be displayed on the notice board one day prior. Buses will depart at 6:15 AM. Please pack only essential items due to space constraints in Madina. Remaining luggage can be kept in your room and, if needed, we will store it and return it to you upon your second arrival in Makkah. Lunch will be provided as Tosha in the bus.";
+    botResponse.innerHTML = "🕌 <strong>Madina Departure:</strong><br><br>📋 Your name will be displayed on the <em>notice board</em> one day prior.<br>🚌 Buses will depart at <strong>6:15 AM</strong>.<br>🎒 <strong>Pack only essential items</strong> due to space constraints in Madina.<br>🧳 Remaining luggage can be stored and will be returned upon your second arrival in Makkah.<br>🍱 <em>Lunch will be provided as Tosha in the bus.</em>";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// Airport Departure Information
 function sendAirportDepartureInfo_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Airport Departure:\n\nYou will depart 5 hours prior to your flight time. Please do not forget your belongings, documents, and passports. Remember to check the notice board regularly for updates.";
+    botResponse.innerHTML = "✈️ <strong>Airport Departure:</strong><br><br>⏰ You will depart <strong>5 hours prior</strong> to your flight time.<br>🧳 <em>Please do not forget your belongings, documents, and passports.</em><br>📢 <em>Check the notice board regularly for updates.</em>";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Function to display Laundry information
+// Laundry Information
 function sendLaundryInformation_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Laundry Options:\n\nPaid laundry is available on the LG floor, and your clothes will be returned within 24 hours. Self laundry is available on the 17th floor. Your clothes will be at your own responsibility, and you will need to use your own detergent powder.";
+    botResponse.innerHTML = "🧺 <strong>Laundry Options:</strong><br><br>💸 <strong>Paid Laundry:</strong> Available on the LG floor. Clothes will be returned within 24 hours.<br>🧴 <strong>Self Laundry:</strong> Available on the 17th floor. <em>You are responsible for your clothes and must use your own detergent.</em>";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-// Similar functions for other information sections (Accounts, Mawaid, etc.)
+// Accounts and Checkout Information
 function sendAccountsInformation_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Accounts and Checkout:\n\nYou are required to _check out_ 24 hours prior to your departure at the MP floor or at UG office no. 2 and collect your passport accordingly.";
+    botResponse.innerHTML = "💼 <strong>Accounts and Checkout:</strong><br><br>⏰ <strong>Check out 24 hours prior</strong> to your departure at the MP floor or UG office no. 2.<br>🛂 <em>Collect your passport accordingly.</em>";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// Mawaid Timings
 function sendMawaidInformation_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Mawaid Timings:\n\nPlease attend the _mawaid_ on the PR floor in Libas al-Anwar only. The timings are as follows:\n- Breakfast: 7:30 - 9:00 AM\n- Lunch: 1:30 - 2:00 PM\n- Dinner: 7:30 - 8:00 PM\nPlease be punctual and attend on time.";
+    botResponse.innerHTML = "🍽️ <strong>Mawaid Timings:</strong><br><br>📍 Attend on the <strong>PR floor in Libas al-Anwar</strong> only.<br>⏰ <strong>Timings:</strong><br> - 🍞 Breakfast: <strong>7:30 - 9:00 AM</strong><br> - 🍛 Lunch: <strong>1:30 - 2:00 PM</strong><br> - 🍲 Dinner: <strong>7:30 - 8:00 PM</strong><br>⏳ <em>Please be punctual and attend on time.</em>";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// Zamzam Water Information
 function sendZamzamInformation_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Zamzam Water:\n\nZamzam water will be available for purchase at the airport only for 13 SAR. It will not be counted as part of your check-in luggage. Only one bottle per passport is allowed, subject to flight and government regulations.";
+    botResponse.innerHTML = "💧 <strong>Zamzam Water:</strong><br><br>🛒 Available for purchase at the airport for <strong>13 SAR</strong>.<br>🧳 <em>Not counted as part of your check-in luggage.</em><br>⚠️ <strong>One bottle per passport</strong> allowed (subject to flight and government regulations).";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// SIM Card Information
 function sendSimCardInformation_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "SIM Cards:\n\nSIM cards are available for purchase near the Haram with your Visa ID and Passport ID. Please carry these documents with you. STC Sim Cards are preferable due to their superior connectivity.";
+    botResponse.innerHTML = "📱 <strong>SIM Cards:</strong><br><br>🛍️ Available for purchase near the Haram.<br>📄 <strong>Required:</strong> Visa ID and Passport ID.<br>📡 <strong>Recommendation:</strong> <em>STC Sim Cards</em> for superior connectivity.";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// Haram Clothes Information
 function sendHaramClothesInformation_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Haram Clothes Information:\n\nEntry into the Haram is strictly allowed only in _ehraam_ for men and single-color rida (no laces, work, or design) for women. Anyone not adhering to these guidelines will not be permitted entry.";
+    botResponse.innerHTML = "👗 <strong>Haram Clothes Information:</strong><br><br>🚹 Men: <em>Only in ehraam</em><br>🚺 Women: <em>Single-color rida (no laces, work, or design)</em><br>⚠️ <strong>Entry will be denied</strong> if guidelines are not followed.";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
 
+// Floor Information
 function sendFloorInfo_emreq() {
     const chatBox = document.getElementById('chatBox');
     const botResponse = document.createElement('div');
     botResponse.className = 'bot-message';
-    botResponse.innerText = "Floor Information:\n\n- UG: Reception\n- MP: Accounts and Sabaq\n- DH: Mawaid\n- PR: Mawaid\n- 17th floor: Self Laundry\n- LG: Paid Laundry";
+    botResponse.innerHTML = "🏢 <strong>Floor Information:</strong><br><br>🔹 <strong>UG:</strong> Reception<br>🔹 <strong>MP:</strong> Accounts and Sabaq<br>🔹 <strong>DH:</strong> Mawaid<br>🔹 <strong>PR:</strong> Mawaid<br>🔹 <strong>17th floor:</strong> Self Laundry<br>🔹 <strong>LG:</strong> Paid Laundry";
     chatBox.appendChild(botResponse);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
+
 
 
 function displayPlacesToVisit() {
